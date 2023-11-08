@@ -1,42 +1,94 @@
-/* styles.css */
-
-/* Body styles */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 32px;
     color: #333;
 }
 
-/* Heading styles */
-h1 {
-    color: #0056b3;
-    margin-top: 20px;
-}
-
 h2 {
-    color: #007b00;
-    margin-top: 5px;
+    font-size: 20px;
+    color: #666;
 }
 
-/* Paragraph styles */
-p {
+/* Main Content Styles */
+main {
+    color: #444;
     line-height: 1.6;
+    font-size: 16px;
 }
 
-/* Center content */
-h1, h2, p {
-    text-align: center;
-    margin: 10px;
-}
-
-/* Style the title and links */
+/* Link Styles */
 a {
+    color: #007bff;
     text-decoration: none;
-    color: #0056b3;
 }
 
 a:hover {
     text-decoration: underline;
 }
+
+/* Description Styles */
+p {
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    margin: 20px 0;
+}
+
+/* Add some padding and a border to create separation */
+p {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Highlight keywords */
+p strong {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Format bullet points with list items */
+p ul {
+    margin: 0;
+    padding: 0;
+    list-style: disc inside;
+}
+
+p li {
+    margin-left: 20px;
+}
+
+/* Style links in the description */
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Apply other formatting as needed */
