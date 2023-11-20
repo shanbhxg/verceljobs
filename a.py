@@ -25,7 +25,7 @@ def preprocess_text(description):
 
     additional_info = description[:responsibilities_start].strip()
 
-    result = f"\nAdditional Information:\n{additional_info}\n\nResponsibilities:" + "\u2022 " + ('\n\u2022 '.join(responsibilities_list) if responsibilities_list else '') + "\n\nQualifications:" + "\u2022 " + ('\n\u2022 '.join(qualifications_list) if qualifications_list else '')
+    result = f"<br>Additional Information:<br>{additional_info}<br>Responsibilities:" + "\u2022 " + ('<br>\u2022 '.join(responsibilities_list) if responsibilities_list else '') + "<br>Qualifications:" + "\u2022 " + ('<br>\u2022 '.join(qualifications_list) if qualifications_list else '')
 
     return result
 
