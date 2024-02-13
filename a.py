@@ -38,16 +38,13 @@ if not os.path.exists('job_pages'):
 
 # Iterate through each row in the DataFrame and generate HTML
 for index, job in jobs_data.iterrows():
-    job_id = job['job_ID'] 
-    job_title = job.get('designation', 'you!')
-    company = job['name']
-    work_type = job['work_type']
-    involvement = job['involvement']
-    employees_count = job['employees_count']
-    total_applicants = job['total_applicants']
-    level = job['level']
-    location = job['City'] + ', ' + job['State'] 
-    job_description = job['job_details']
+    job_id = job['uniq_id'] 
+    job_title = job.get('jobtitle', 'you!')
+    company = job['company']
+    involvement = job['employmenttype_jobstatus']
+    location = job['joblocation_address']
+    job_description = job['jobdescription']
+    skills = job['skills']
 
     # Preprocess the job description using spaCy
     preprocessed_description = preprocess_text(job_description)
@@ -64,8 +61,8 @@ for index, job in jobs_data.iterrows():
     <div class="container">
         <header>
             <h1>{company} is looking for {job_title}!</h1>
-            <h2>{work_type} | {involvement} | {total_applicants} applicants | {level}</h2>
-            <h2>{location}</h2>
+            <h2>{involvement} | {location}</h2>
+            <h2>{skills}</h2>
         </header>
         <main>
             <p id="jobDescription">{preprocessed_description}</p>
